@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  barnbase:
+    build: .
+    image: barnbase
+    environment:
+      - API_HOST=barnyard-api1
+    networks:
+      - alpha
+    ports:
+      - "3306:3306"
+    container_name: barnbase1
+
+  barnyard-api:
+    build: .
+    image: barnyard-api
+    environment:
+      - DB_HOST=barnbase1
+    networks:
+      - alpha
+      - beta
+    ports:
+      - "5000:5000"
+    container_name: barnyard-api1
+
+  barnyard-web:
+    build: .
+    image: barnyard-web
+    environment:
+      - API_URL=
+    networks:
+      - beta
+    ports:
+      - "80:80"
+    container_name: barnyard-web1
+
+networks:
+  alpha:
+  beta:
