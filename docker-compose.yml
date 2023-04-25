@@ -10,6 +10,8 @@ services:
       - alpha
     ports:
       - "3306:3306"
+    volumes:
+      - batabase:/var/lib/mysql
     container_name: barnbase1
 
   barnyard-api:
@@ -38,3 +40,5 @@ services:
 networks:
   alpha:
   beta:
+volumes:
+  batabase:
