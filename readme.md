@@ -19,7 +19,7 @@ Barnyard-Full-Stack is a self-hosting solution for the Barnyard project that all
 1. Clone the repository to your local machine:
 
    ```
-   git clone https://github.com/Barnyard-Solutions/barnyard-full-stack.git
+   git clone  --recurse-submodules https://github.com/Barnyard-Solutions/barnyard-full-stack.git
    ```
 
 2. Navigate to the cloned directory:
