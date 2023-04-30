@@ -1,6 +1,6 @@
-[submodule "barnbase"]
-	path = barnbase
-	url = git@github.com:Barnyard-Solutions/barnbase.git
+[submodule "barnyard-database"]
+	path = barnyard-database
+	url = git@github.com:Barnyard-Solutions/barnyard-database.git
 [submodule "barnyard-api"]
 	path = barnyard-api
 	url = git@github.com:Barnyard-Solutions/barnyard-api.git
