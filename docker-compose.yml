@@ -12,13 +12,13 @@ services:
       - "3306:3306"
     volumes:
       - batabase:/var/lib/mysql
-    container_name: barnbase1
+    container_name: barnyard-database1
 
   barnyard-api:
     build: .
     image: barnyard-api
     environment:
-      - DB_HOST=barnbase1
+      - DB_HOST=barnyard-database1
     networks:
       - alpha
       - beta
