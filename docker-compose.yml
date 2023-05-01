@@ -3,7 +3,7 @@ version: '3'
 services:
   barnbase:
     build: .
-    image: barnbase
+    image: barnyard-database
     environment:
       - API_HOST=barnyard-api1
     networks:
@@ -11,7 +11,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - batabase:/var/lib/mysql
+      - database:/var/lib/mysql
     container_name: barnyard-database1
 
   barnyard-api:
@@ -30,7 +30,7 @@ services:
     build: .
     image: barnyard-web
     environment:
-      - API_URL=
+      - API_URL=https://barnyardapi.hopto.org/
     networks:
       - beta
     ports:
@@ -41,4 +41,4 @@ networks:
   alpha:
   beta:
 volumes:
-  batabase:
+  database:
