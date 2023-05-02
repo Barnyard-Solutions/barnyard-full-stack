@@ -37,6 +37,10 @@ Barnyard-Full-Stack is a self-hosting solution for the Barnyard project that all
 
 4. Open your web browser and navigate to `http://localhost` to use the Barnyard app.
 
+## :warning: Production
+
+Please verify that the IP URL in the docker-compose file correctly points to the domain name to avoid CORS issues.
+
 ## :raising_hand: Contributors
 
 Contributions to the Barnyard project are always welcome! <br>

@@ -30,7 +30,7 @@ services:
     build: .
     image: barnyard-web
     environment:
-      - API_URL=https://barnyardapi.hopto.org/
+      - API_URL=
     networks:
       - beta
     ports:
