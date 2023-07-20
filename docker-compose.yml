@@ -2,6 +2,7 @@ version: '3'
 
 services:
   barnbase:
+    restart: always
     build: .
     image: barnyard-database
     environment:
@@ -15,6 +16,7 @@ services:
     container_name: barnyard-database1
 
   barnyard-api:
+    restart: always
     build: .
     image: barnyard-api
     environment:
@@ -27,10 +29,11 @@ services:
     container_name: barnyard-api1
 
   barnyard-web:
+    restart: always
     build: .
     image: barnyard-web
     environment:
-      - API_URL=https://barnyardapi.hopto.org/
+      - API_URL=https://api.barnyard.ovh
     networks:
       - beta
     ports:
