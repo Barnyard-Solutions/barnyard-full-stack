@@ -28,6 +28,16 @@ services:
       - "5000:5000"
     container_name: barnyard-api1
 
+  barnyard-notify:
+    build: .
+    image: barnyard-notify
+    environment:
+      - DB_HOST=barnyard-database1
+    networks:
+      - alpha
+    container_name: barnyard-notify1
+
+
   barnyard-web:
     restart: always
     build: .
